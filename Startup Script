@@ -1,6 +1,14 @@
+G21 ; Set all units to millimeters
+M107 ; Turn off the part cooling fan
+M104 S215 ; Set extruder to 215°C [and immediately move on]
+M140 S60 ; Set bed to 60°C [and immediately move on]
+M190 S60 ; Set bed to 60°C [and wait for 60°C]
+M109 S215 ; Set extruder to 215°C [and wait for 215°C]
 G28 ; Move toolhead to origin (or home X, Y, Z)
 G29 ; Auto-Level the printer bed using a measurement probe
-G92 E0 ; Reset the extruder position to 0mm
-G1 F200 E3 ; set the feedrate to 200mm/minute
-G92 E0 ; Reset the extruder position to 0mm
+G92 E0.0 ; Reset the extruder position to 0mm
+G1 Z0.2 ; Move hotend nozzle to Z position of 0.2mm
+G1 X100.0 E20.0 ; Prime the hotend (Move to X=100mm & Extruder=20mm)
+G92 E0.0 ; Reset the extruder position to 0mm
+G90 ; Set to absolute positioning as opposed to relative
 M117 StudioPieters
