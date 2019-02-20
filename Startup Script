@@ -1,0 +1,6 @@
+G28 ; Move toolhead to origin (or home X, Y, Z)
+G29 ; Auto-Level the printer bed using a measurement probe
+G92 E0 ; Reset the extruder position to 0mm
+G1 F200 E3 ; set the feedrate to 200mm/minute
+G92 E0 ; Reset the extruder position to 0mm
+M117 StudioPieters
